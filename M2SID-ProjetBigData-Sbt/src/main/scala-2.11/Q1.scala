@@ -10,11 +10,12 @@ object Q1 {
     val conf = new SparkConf().setAppName("Prog1").setMaster("local[*]")
     val sc: SparkContext = new SparkContext(conf)
 
-    sc.textFile("C:\\Users\\Said\\IdeaProjects\\untitled\\M2SID-ProjetBigData-Sbt\\extraitCrimes.csv", 2)
-      .map(l => {
+    val data = sc.textFile("C:\\Users\\Said\\IdeaProjects\\untitled\\M2SID-ProjetBigData-Sbt\\extraitCrimes.csv", 2)
+    val categoryTypeHeader = data.first().split(",")(5)
+    data.map(l => {
         l.split(",")(5)
       })
-      .filter(x => x.nonEmpty)
+      .filter(x => (x.nonEmpty && x != categoryTypeHeader))
       .map(x => (x,1))
       .reduceByKey(_+_)
       .sortBy(- _._2)
