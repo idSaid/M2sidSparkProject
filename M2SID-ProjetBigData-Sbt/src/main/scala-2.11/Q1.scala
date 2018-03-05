@@ -19,7 +19,7 @@ object Q1 {
       .map(x => (x,1))
       .reduceByKey(_+_)
       .sortBy(- _._2)
-      .saveAsTextFile("M2SID-ProjetBigData-Sbt\\desc crimes categories")
+      .saveAsTextFile("M2SID-ProjetBigData-Sbt\\Q1")
 
   }
 }
