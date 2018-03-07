@@ -4,7 +4,7 @@
 		module="m2sid-projetbigdata-sbt$sbt_2.10"
 		revision="1.0"
 		status="integration"
-		publication="20180304181731"
+		publication="20180306234525"
 	/>
 	<configurations>
 		<conf name="default" visibility="public"/>

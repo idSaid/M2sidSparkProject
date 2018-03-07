@@ -1,7 +1,6 @@
 [debug] Other repositories:
 [debug] Default repositories:
 [debug] Using inline dependencies specified in Scala.
-[debug] no default cache defined: set to C:\Users\Said\.ivy2\cache
 [debug] :: resolving dependencies :: default#m2sid-projetbigdata-sbt$sbt_2.10;1.0
 [debug] 	confs: [default]
 [debug] 	validate = true
@@ -1779,9 +1778,9 @@
 [debug] 	[NOT REQUIRED] org.scala-sbt#test-interface;1.0!test-interface.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#apply-macro;0.13.17!apply-macro.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#template-resolver;0.1!template-resolver.jar
-[debug] :: resolution report :: resolve 5606ms :: artifacts dl 221ms
+[debug] :: resolution report :: resolve 9795ms :: artifacts dl 181ms
 [debug] 	report for default#m2sid-projetbigdata-sbt$sbt_2.10;1.0 default produced in C:\Users\Said\IdeaProjects\untitled\M2SID-ProjetBigData-Sbt\target\scala-2.11\resolution-cache\reports\default-m2sid-projetbigdata-sbt$sbt_2.10-default.xml
-[debug] 	resolve done (5606ms resolve - 221ms download)
+[debug] 	resolve done (9795ms resolve - 181ms download)
 [debug] Using inline dependencies specified in Scala.
 [debug] :: resolving dependencies :: default#m2sid-projetbigdata-sbt$sources_2.10;1.0
 [debug] 	confs: [default]
@@ -2459,6 +2458,6 @@
 [debug] 	[NOT REQUIRED] com.jcraft#jsch;0.1.50!jsch.jar(src)
 [debug] 	[NOT REQUIRED] org.scala-sbt#compiler-interface;0.13.17!compiler-interface.jar(src)
 [debug] 	[NOT REQUIRED] org.scala-sbt#persist;0.13.17!persist.jar(src)
-[debug] :: resolution report :: resolve 832ms :: artifacts dl 166ms
+[debug] :: resolution report :: resolve 1535ms :: artifacts dl 240ms
 [debug] 	report for default#m2sid-projetbigdata-sbt$sources_2.10;1.0 default produced in C:\Users\Said\IdeaProjects\untitled\M2SID-ProjetBigData-Sbt\target\scala-2.11\resolution-cache\reports\default-m2sid-projetbigdata-sbt$sources_2.10-default.xml
-[debug] 	resolve done (832ms resolve - 166ms download)
+[debug] 	resolve done (1535ms resolve - 240ms download)
