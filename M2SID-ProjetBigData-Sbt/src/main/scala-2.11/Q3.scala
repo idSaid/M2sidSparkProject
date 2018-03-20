@@ -1,6 +1,5 @@
 import org.apache.spark.{SparkConf, SparkContext}
 import org.apache.spark.mllib.linalg.Vectors
-import org.apache.spark.rdd.RDD
 import org.apache.spark.mllib.clustering.KMeans
 
 import scala.util.Try
@@ -12,10 +11,13 @@ import scala.util.Try
 object Q3 {
 
   def main(args: Array[String]): Unit = {
+    val startTimeMillis = System.currentTimeMillis()
+
     val conf = new SparkConf().setAppName("Prog1").setMaster("local[*]")
     val sc: SparkContext = new SparkContext(conf)
 
-    val data = sc.textFile("C:\\Users\\Said\\IdeaProjects\\untitled\\M2SID-ProjetBigData-Sbt\\extraitCrimes.csv", 2)
+    //val data = sc.textFile("C:\\Users\\Said\\IdeaProjects\\untitled\\M2SID-ProjetBigData-Sbt\\Crimes-2001-present.csv", 2)
+    val data = sc.textFile("share/Crimes.csv", 2)
     val header = data.first()
     val filterdData = data.filter(row => row != header)
 
@@ -45,8 +47,15 @@ object Q3 {
       .sortBy(_._2)
       .take(3)
 
-    sc.parallelize(mostDagerousZones).saveAsTextFile("M2SID-ProjetBigData-Sbt\\Q3-MostDangerousZones")
-    sc.parallelize(lessDagerousZones).saveAsTextFile("M2SID-ProjetBigData-Sbt\\Q3-LessDangerousZones")
+    //sc.parallelize(mostDagerousZones).saveAsTextFile("M2SID-ProjetBigData-Sbt\\Q3-MostDangerousZones")
+    //sc.parallelize(lessDagerousZones).saveAsTextFile("M2SID-ProjetBigData-Sbt\\Q3-LessDangerousZones")
+
+    sc.parallelize(mostDagerousZones).saveAsTextFile("output/Q3-MostDangerousZones")
+    sc.parallelize(lessDagerousZones).saveAsTextFile("output/Q3-LessDangerousZones")
+
+    val endTimeMillis = System.currentTimeMillis()
+    val durationSeconds = (endTimeMillis - startTimeMillis) / 1000
+    println(">>>>>> Execution time : ", durationSeconds , "(sec)")
 
   }
 
